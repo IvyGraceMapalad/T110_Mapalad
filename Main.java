@@ -1,18 +1,22 @@
-import java.util.Scanner;
-public class Main{
+package package1;
 
+import java.util.Scanner;
+import package2.Main_2;
+public class Main {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner (System.in);
 		
-		System.out.print("Enter time in minutes : ");
-		int min = scan.nextInt();
+		System.out.print("Enter your full name: ");
+	    String name = scan.nextLine();
+		System.out.print("Enter your age      : ");
+	    int age = scan.nextInt();
+		System.out.print("Enter your voter ID : ");
+		int id = scan.nextInt();
 		
-		int revolutionTime = min * 3000;
-		System.out.println("There are " + revolutionTime +" revolution per minute.");
-		
-		int sec = revolutionTime / 60;
-		System.out.println("\nIt rotates " + sec + " degrees in one second" );
+		Main_2 Obj = new Main_2(age);
+		System.out.print("\n[INFO]");
+		System.out.print("\nName: "+ name);
+		System.out.print("\nAge : "+ age);
+		System.out.print("\nID  : "+ id);
 	}
-
 }
-
